@@ -1,11 +1,11 @@
-About buildver
-==============
+About buildver-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/buildver-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pyrustic/buildver
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/buildver-feedstock/blob/main/LICENSE.txt)
 
 Summary: Tool to build Python packages with built-in intuitive versioning mechanism
 
