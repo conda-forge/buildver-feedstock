@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/buildver-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/buildver-{{ version }}.tar.gz
   sha256: e75610ff7448abe04168713f0f09c3a244c8a8e49446be9e35f64335c456a40a
 
 build:
@@ -14,14 +14,14 @@ build:
     - buildver = buildver.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - subrun
 
 test:
@@ -32,6 +32,7 @@ test:
     - buildver --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyrustic/buildver
